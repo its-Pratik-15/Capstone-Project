@@ -49,3 +49,11 @@ Thumbs.db
 
 # Logs
 *.log
+# Generated Tableau exports
+tableau/*.csv
+tableau/data_dictionary.csv
+
+# Generated reports
+reports/*.pdf
+reports/*.html
+.DS_Store/
