@@ -46,8 +46,46 @@ Exploratory Data Analysis was conducted in `notebooks/03-eda.ipynb` and covered:
 ## 8. Data Visualization
 Visualizations were created during the EDA and statistical analysis phases using Python libraries:
 - **Charts Created**: Bar charts for top product categories and geographic distributions, line charts for time series trends, and histograms for statistical distributions.
-- **Tools Used**: Matplotlib and Seaborn in Jupyter Notebooks.
-- *Note: While a CSV file is exported to the `tableau/` folder, no actual Tableau dashboard files (.twbx) are present in the repository.*
+- **Tools Used**: Matplotlib and Seaborn in Jupyter Notebooks, Tableau Public for interactive dashboards.
+
+### Tableau Dashboard
+
+**Dashboard Title:** E-commerce Performance and Delivery Insights Dashboard
+
+**Objective:** Analyze end-to-end e-commerce performance, focusing on revenue trends, order lifecycle, delivery efficiency, payment behavior, and customer experience.
+
+**Key Metrics (KPIs):**
+- Total Revenue
+- Total Orders
+- Average Delivery Time (Days)
+- Delivery Success Rate (%)
+- Average Order Value
+
+**Key Visualizations:**
+1. **Revenue Trend** - Time-series line chart showing revenue across purchase dates to identify growth patterns, seasonality, and demand fluctuations.
+2. **Order Stage Distribution** - Categorical view of order lifecycle stages (Delivered, Shipped Not Delivered, Approved Not Shipped, Created Only) highlighting operational bottlenecks.
+3. **Payment Method Distribution** - Breakdown of payment types (credit card, debit card, UPI, etc.) providing insight into customer payment preferences.
+4. **Delivery Performance Analysis** - Comparison of actual vs. estimated delivery time to identify delays and logistics efficiency.
+5. **Customer Experience (Reviews)** - Analysis of review scores and sentiment classification to evaluate customer satisfaction.
+
+**Interactive Filters:**
+- Order Purchase Date (Range Slider)
+- Customer State (Geographical Filter)
+- Order Stage (Operational Filter)
+
+All filters are applied across the entire dashboard for consistent and dynamic analysis.
+
+**Business Insights:**
+- Delivery delays are concentrated in specific states, indicating logistical inefficiencies
+- Majority of revenue is driven by delivered orders, highlighting fulfillment importance
+- Credit card payments dominate, suggesting reliance on installment-based purchasing
+- Negative reviews are often associated with delayed deliveries
+
+**Design Principles:**
+- Clean and minimal layout with consistent font and color usage
+- Logical grouping of KPIs and charts
+- Right-aligned filter panel for better usability
+- High contrast for readability
 
 ## 9. Statistical Analysis / Model / Business Logic
 Statistical analysis was performed in `notebooks/04-statistical_analysis.ipynb` using `scipy` and `scikit-learn`:
@@ -84,7 +122,7 @@ Based on the Git commit history and repository analysis:
 |------------|--------------|
 | Pratik Kumar Pan | Lead Data Engineer - Added all 9 raw CSV datasets (1.6M+ rows) and processed data files. Created extraction notebook (01) and comprehensive cleaning notebook (02) with data transformation logic. Developed data quality checks, handled missing values, and implemented duplicate removal. Engineered data merges across relational tables and established the data processing workflow. Added Tableau files to the repository. |
 | Adarsh Priydarshi | Senior Data Analyst - Executed all analysis notebooks (03-EDA, 04-Statistical Analysis, 05-Final Load Prep) with complete outputs and visualizations. Implemented statistical analysis including hypothesis testing, ANOVA, regression models, and correlation analysis. Generated visualization outputs and analytical reports. Managed repository maintenance, configured `.gitignore`, and handled merge conflicts. |
-| Ayush Kumar Jha | Project owner and repository maintainer. Created comprehensive EDA notebook (03), statistical analysis notebook (04), and final load prep notebook (05). Managed pull requests, code reviews, and repository structure. Fixed JSON structures and removed emojis for cleaner presentation. |
+| Ayush Kumar Jha | Project owner and repository maintainer. Created comprehensive EDA notebook (03), statistical analysis notebook (04), and final load prep notebook (05). Managed pull requests, code reviews, and repository structure. Fixed JSON structures for cleaner presentation. |
 | Harsh Patel | Developed the complete ETL pipeline script (`etl_pipeline.py`) and final load preparation script (`final_load_prep.py`). Generated the Tableau-ready CSV dataset with 112,651 records. Implemented data optimization and feature engineering. |
 | Saubhagya Anubhav | Created comprehensive project documentation including detailed README sections. Added data documentation and capstone project documentation. Performed repository analysis and documentation accuracy verification. |
 
@@ -134,5 +172,4 @@ Navigate to the `notebooks/` folder and explore files `01` through `05`.
 This project demonstrates how raw e-commerce data can be cleaned, merged, analyzed, and prepared for visualization. The work highlights important areas such as customer behavior, delivery performance, and review patterns. Overall, the project shows how data analysis can support better business understanding and decision-making.
 
 ## 18. Documentation Accuracy Notes
-- **Tableau Visualizations**: The repository contains a folder named `tableau/` and code that exports a "Tableau-ready CSV", but it does not contain any actual Tableau dashboard files or screenshots. Visualizations were confirmed to be done in Python (Matplotlib/Seaborn).
 - **Automation**: The documentation refers to "automated Python scripts" because the `etl_pipeline.py` script can run the transformations in one command, but there is no evidence of scheduled automation (e.g., cron jobs or Airflow) in the repository.
